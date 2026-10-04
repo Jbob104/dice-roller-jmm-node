@@ -7,7 +7,7 @@ var url = require('url');
 
 const port = process.env.PORT || 3000
 const majorVersion = 1
-const minorVersion = 0
+const minorVersion = 1
 
 // Use Express to publish static HTML, CSS, and JavaScript files that run in the browser. 
 app.use(express.static(__dirname + '/static'))
