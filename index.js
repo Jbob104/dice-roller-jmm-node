@@ -1,15 +1,17 @@
 const express = require('express')
 app = express()
 
-const cors = require("cors")
+const cors = require('cors')
 
 var url = require('url');
 
+// Server running on port 3000
 const port = process.env.PORT || 3000
 const majorVersion = 1
-const minorVersion = 2
+const minorVersion = 3
 
-// Returns a successful message if request was not blocked by CORS
+// Returns a successful message if request was not blocked by CORS,
+// Should be blocked since written prior to CORS origin being set.
 app.get('/cors-fail', (req, res) => {
 	console.log('Calling "/cors-fail"')
 	res.type('text/plain')
@@ -19,8 +21,6 @@ app.get('/cors-fail', (req, res) => {
 // Use Express to publish static HTML, CSS, and JavaScript files that run in the browser.
 app.use(express.static(__dirname + '/static'))
 app.use(cors({ origin: '*' }))
-
-// The app.get functions below are being processed in Node.js running on the server.
 
 // Returns version of server
 app.get('/version', (request, response) => {

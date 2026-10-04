@@ -1,5 +1,5 @@
-# Node.js Server for Dice Roller
-This repository contains source code for a RESTful API Node.js and Express server for rolling dice.
+# Server Dice Roller with Node.js, Jacob Mysliwiec, Node.js Server for Dice Roller
+This repository contains source code for a Node.js and Express server with APIs for rolling dice.
 
 Azure hosting notes:
 Select Node 24 LTS
