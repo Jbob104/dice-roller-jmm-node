@@ -7,9 +7,16 @@ var url = require('url');
 
 const port = process.env.PORT || 3000
 const majorVersion = 1
-const minorVersion = 1
+const minorVersion = 2
 
-// Use Express to publish static HTML, CSS, and JavaScript files that run in the browser. 
+// Returns a successful message if request was not blocked by CORS
+app.get('/cors-fail', (req, res) => {
+	console.log('Calling "/cors-fail"')
+	res.type('text/plain')
+	res.send('CORS Success')
+})
+
+// Use Express to publish static HTML, CSS, and JavaScript files that run in the browser.
 app.use(express.static(__dirname + '/static'))
 app.use(cors({ origin: '*' }))
 
